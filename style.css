@@ -34,10 +34,12 @@ p{
     padding-bottom: 5px;
 }
 header{ 
-    overflow: hidden;
     color:#fff;
+    overflow: hidden;
     height:100vh;
+    width:100%;
     padding-bottom: 8rem;
+    position: relative;
 }
 
 header::before{
@@ -45,7 +47,7 @@ header::before{
     position: absolute;
     left:0;
     width:100vw;
-    height:100%;
+    height:100vh;
     background: #24053e;
     border-radius: 50%;
     transform-origin: bottom;
@@ -68,13 +70,17 @@ header::before{
     flex-direction: column;
     gap:1.7rem;
     align-items: center;
-    margin:4rem 1rem;
+    margin:4rem 1rem 0;
     text-align: center;
 }
-.heading__banner .heading__banner-img{
-    max-width:650px;
-    margin-top: 2rem;
+.heading__banner-img{
+    max-width:600px;
+    margin-top: 3rem;
     width: 100%;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 .heading__banner h1{
     font-size: 4rem;
@@ -219,6 +225,10 @@ footer{
     }
 }
 @media(max-width:600px){
+    .heading__banner-img{
+        margin-inline: 1rem;
+        transform: translateX(-50%) translateY(40%);
+    }
     .heading__banner h1{
         font-size: 2.5rem;
     }
