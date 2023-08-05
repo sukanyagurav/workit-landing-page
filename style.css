@@ -11,7 +11,6 @@ padding: 0;
 }
 body{
     font-family: 'Fraunces', serif;
-    overflow-x: hidden;
 }
 img{
     display: block;
@@ -22,11 +21,16 @@ a{
     color:inherit;
     transition: color 0.3s ease-in-out;
 }
-.heading__nav{
-    padding:1.4rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a,
+.btn,p{
+    font-family: 'Manrope', sans-serif;
+}
+p{
+    font-weight: 100;
+    line-height: 1.7; 
+}
+.underline{
+    border-bottom: 2px solid var(--border-color);
 }
 header{ 
     color:#fff;
@@ -39,13 +43,20 @@ header{
 header::before{
     content:'';
     position: absolute;
-    left:0;
-    width:100vw;
+    left:50%;
+    bottom:1;
+    width:100vh;
     height:100vh;
     background: #24053e;
     border-radius: 50%;
     transform-origin: bottom;
-    transform:  scale(4);
+    transform: translateX(-50%) scale(7);
+}
+.heading__nav{
+    padding:1.4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .heading__section{
     max-width: 1200px;
@@ -66,13 +77,8 @@ header::before{
     margin-top: 2rem;
     width: 100%;
 }
-
 .heading__banner h1{
     font-size: 4rem;
-}
-a,
-.btn{
-    font-family: 'Manrope', sans-serif;
 }
 a:hover{
     color: var(--border-color);
@@ -91,9 +97,6 @@ a:hover{
     background: transparent;
     color:#fff;
 }
-.underline{
-    border-bottom: 2px solid var(--border-color);
-}
 .pattern{
     position: absolute;
     z-index: -1;
@@ -107,7 +110,6 @@ a:hover{
     bottom:50%;
     right:-10%;
 }
-
 main{
     padding:1rem;
     margin-bottom: 13rem;
@@ -126,16 +128,11 @@ main{
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-   place-content: center;
+    place-content: center;
     gap:2rem;
 }
 .feature article h2{
     font-family: 'Fraunces', serif;
-}
-.feature article p{
-    line-height: 1.7;
-    font-weight: 100;
-    font-family: 'Manrope', sans-serif;
 }
 .feature article span{
     padding:1rem;
@@ -156,7 +153,7 @@ main{
     position: relative;
 }
 .user-img{
-    max-width: 250px;
+    max-width: 300px;
     width: 100%;
 }
 .cta-section{
@@ -174,10 +171,6 @@ main{
 }
 .cta-section p{
     margin:1rem 0;
-    letter-spacing: 1.1px;
-    line-height: 1.7;
-    font-weight: 100;
-    font-family: 'Manrope', sans-serif;
 }
 .cta-section .btn{
     display: inline-block;
@@ -191,10 +184,11 @@ footer{
     padding:1rem 1rem 2rem;
     margin-inline: auto;
     text-align: center;
+    color:var(--banner-color);
 }
 .footer__logo{
     margin-inline:auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 .social__link {
     list-style: none;
@@ -226,8 +220,19 @@ footer{
     }
 }
 @media(max-width:600px){
-  
+    .heading__banner h1{
+        font-size: 2.5rem;
+    }
+    .cta-section{
+        padding: 2rem;
+    }
+    .cta-section h3{
+        font-size: 2rem;
+    }
     .pattern{
+        display: none;
+    }
+    .cta-section img{
         display: none;
     }
     .feature article{
@@ -254,6 +259,6 @@ footer{
         margin-inline: auto;
     }
     footer{
-        padding-top:13rem;
+        padding-top:10rem;
     }
 }
