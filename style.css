@@ -11,6 +11,7 @@ padding: 0;
 }
 body{
     font-family: 'Fraunces', serif;
+    overflow-x: hidden;
 }
 img{
     display: block;
@@ -39,19 +40,23 @@ header{
     height:100vh;
     width:100%;
     padding-bottom: 8rem;
-    position: relative;
+ 
 }
 
-header::before{
+header::after{
     content:'';
-    position: absolute;
-    left:0;
+   border-bottom-left-radius: 50% ;
+   
+   border-bottom-right-radius: 50%;
+   position: absolute;
     width:100vw;
     height:100vh;
+    left:0;
+    bottom: 0;
     background: #24053e;
-    border-radius: 50%;
+    z-index: -1;
     transform-origin: bottom;
-    transform:  scale(4);
+    transform:  scale(2);
 }
 .heading__nav{
     padding:1.4rem 1rem;
@@ -73,14 +78,16 @@ header::before{
     margin:4rem 1rem 0;
     text-align: center;
 }
+
 .heading__banner-img{
     max-width:600px;
     margin-top: 3rem;
     width: 100%;
-    position: absolute;
+    /* position: absolute;
     left:50%;
+    bottom: 0;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 999; */
 }
 .heading__banner h1{
     font-size: 4rem;
@@ -207,6 +214,7 @@ footer{
     filter: invert(86%) sepia(36%) saturate(771%) hue-rotate(80deg) brightness(97%) contrast(109%);
 }
 @media(max-width:850px){
+  
     .feature{
         grid-template-columns: 1fr;
     }
@@ -225,10 +233,10 @@ footer{
     }
 }
 @media(max-width:600px){
-    .heading__banner-img{
+    /* .heading__banner-img{
         margin-inline: 1rem;
         transform: translateX(-50%) translateY(40%);
-    }
+    } */
     .heading__banner h1{
         font-size: 2.5rem;
     }
