@@ -31,22 +31,21 @@ p{
 }
 .underline{
     border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
 }
 header{ 
-    color:#fff;
-    /* width:100%; */
     overflow: hidden;
+    color:#fff;
     height:100vh;
     padding-bottom: 8rem;
-    position: relative;
 }
+
 header::before{
     content:'';
     position: absolute;
     left:0;
-  
     width:100vw;
-    height:100vh;
+    height:100%;
     background: #24053e;
     border-radius: 50%;
     transform-origin: bottom;
