@@ -12,7 +12,7 @@ Thanks for checking out my solution.🚀
 
 **➤ CSS**
 
-**➤ JS**
+
 ### Screenshot
 
 ![](./images/screenshot-full.png)
